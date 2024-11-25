@@ -14,7 +14,7 @@
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
       "automergeType": "branch",
-      "prCreation": "immediate"
+      "pruneBranchAfterAutomerge": true
     },
     {
       "description": "Raise PR for major updates for NRJMX_VERSION",
