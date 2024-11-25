@@ -2,6 +2,19 @@
   "extends": [
     "github>newrelic/coreint-automation:renovate-base.json5"
   ],
+  "packageRules": [
+    {
+      "description": "Auto upgrade NRJMX_VERSION and automerge",
+      "matchDatasources": ["github-releases"],
+      "matchPackageNames": ["newrelic/nrjmx"],
+      "fileMatch": [
+        "^\\.github/workflows/push_pr\\.yml$",
+        "^\\.github/workflows/prerelease\\.yml$"
+      ],
+      "automerge": true,
+      "automergeType": "pr"
+    }
+  ],
   "regexManagers": [
     {
       "fileMatch": [
