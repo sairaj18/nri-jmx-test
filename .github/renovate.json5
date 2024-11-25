@@ -12,7 +12,8 @@
         "^\\.github/workflows/prerelease\\.yml$"
       ],
       "automerge": true,
-      "automergeType": "pr"
+      "automergeType": "pr",
+      "platformAutomerge": true
     }
   ],
   "regexManagers": [
