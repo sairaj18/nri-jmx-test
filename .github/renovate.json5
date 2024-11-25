@@ -12,7 +12,6 @@
         "^\\.github/workflows/push_pr\\.yml$",
         "^\\.github/workflows/prerelease\\.yml$"
       ],
-      "separateMajorMinor": false,
       "automerge": true
     }
   ],
