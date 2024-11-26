@@ -18,10 +18,6 @@
   ],
   "packageRules": [
     {
-        "matchDatasources": ["nrjmx-version"],
-        "rangeStrategy": "bump"
-    },
-    {
       "description": "Automerge minor and patch updates for NRJMX_VERSION",
       "matchDatasources": ["github-releases"],
       "matchPackageNames": ["newrelic/nrjmx"],
@@ -34,10 +30,6 @@
       "automerge": true,
       "pruneBranchAfterAutomerge": true,
       "platformAutomerge": true
-    },
-    {
-        "matchDatasources": ["nrjmx-major-version"],
-        "rangeStrategy": "bump"
     },
     {
       "description": "Raise PR for major updates for NRJMX_VERSION",
