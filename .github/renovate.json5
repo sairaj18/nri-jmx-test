@@ -18,6 +18,10 @@
   ],
   "packageRules": [
     {
+        "matchDatasources": ["nrjmx-version"],
+        "rangeStrategy": "bump"
+    },
+    {
       "description": "Automerge minor and patch updates for NRJMX_VERSION",
       "matchDatasources": ["github-releases"],
       "matchPackageNames": ["newrelic/nrjmx"],
@@ -26,8 +30,13 @@
         "^\\.github/workflows/prerelease\\.yml$"
       ],
       "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "nrjmx version",
       "automerge": true,
       "pruneBranchAfterAutomerge": true
+    },
+    {
+        "matchDatasources": ["nrjmx-major-version"],
+        "rangeStrategy": "bump"
     },
     {
       "description": "Raise PR for major updates for NRJMX_VERSION",
@@ -38,6 +47,7 @@
         "^\\.github/workflows/prerelease\\.yml$"
       ],
       "matchUpdateTypes": ["major"],
+      "groupName": "nrjmx major version",
       "automerge": false,
       "pruneBranchAfterAutomerge": true
     }
