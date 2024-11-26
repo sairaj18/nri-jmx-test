@@ -2,33 +2,6 @@
   "extends": [
     "github>newrelic/coreint-automation:renovate-base.json5"
   ],
-  "packageRules": [
-    {
-      "description": "Automerge minor and patch updates for NRJMX_VERSION",
-      "matchDatasources": ["github-releases"],
-      "matchPackageNames": ["newrelic/nrjmx"],
-      "fileMatch": [
-        "^\\.github/workflows/push_pr\\.yml$",
-        "^\\.github/workflows/prerelease\\.yml$"
-      ],
-      "matchUpdateTypes": ["minor", "patch"],
-      "automerge": true,
-      "automergeType": "branch",
-      "pruneBranchAfterAutomerge": true
-    },
-    {
-      "description": "Raise PR for major updates for NRJMX_VERSION",
-      "matchDatasources": ["github-releases"],
-      "matchPackageNames": ["newrelic/nrjmx"],
-      "fileMatch": [
-        "^\\.github/workflows/push_pr\\.yml$",
-        "^\\.github/workflows/prerelease\\.yml$"
-      ],
-      "matchUpdateTypes": ["major"],
-      "automerge": false,
-      "prCreation": "immediate"
-    }
-  ],
   "regexManagers": [
     {
       "fileMatch": [
@@ -41,6 +14,32 @@
       "depNameTemplate": "newrelic/nrjmx",
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "semver"
+    }
+  ],
+  "packageRules": [
+    {
+      "description": "Automerge minor and patch updates for NRJMX_VERSION",
+      "matchDatasources": ["github-releases"],
+      "matchPackageNames": ["newrelic/nrjmx"],
+      "fileMatch": [
+        "^\\.github/workflows/push_pr\\.yml$",
+        "^\\.github/workflows/prerelease\\.yml$"
+      ],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true,
+      "pruneBranchAfterAutomerge": true
+    },
+    {
+      "description": "Raise PR for major updates for NRJMX_VERSION",
+      "matchDatasources": ["github-releases"],
+      "matchPackageNames": ["newrelic/nrjmx"],
+      "fileMatch": [
+        "^\\.github/workflows/push_pr\\.yml$",
+        "^\\.github/workflows/prerelease\\.yml$"
+      ],
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "pruneBranchAfterAutomerge": true
     }
   ]
 }
