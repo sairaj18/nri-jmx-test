@@ -32,6 +32,7 @@
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "nrjmx version",
       "automerge": true,
+      "automergeType": "pr",
       "pruneBranchAfterAutomerge": true,
       "platformAutomerge": true
     },
@@ -49,6 +50,7 @@
       ],
       "matchUpdateTypes": ["major"],
       "groupName": "nrjmx major version",
+      "automergeType": "pr",
       "automerge": false,
       "pruneBranchAfterAutomerge": true
     }
