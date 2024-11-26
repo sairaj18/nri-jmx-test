@@ -50,8 +50,7 @@
       "matchUpdateTypes": ["major"],
       "groupName": "nrjmx major version",
       "automerge": false,
-      "pruneBranchAfterAutomerge": true,
-      "platformAutomerge": true
+      "pruneBranchAfterAutomerge": true
     }
   ]
 }
