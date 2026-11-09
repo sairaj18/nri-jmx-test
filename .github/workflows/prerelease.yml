@@ -150,7 +150,7 @@ jobs:
         run: |
           build\windows\package_msi.ps1 -integration "$env:INTEGRATION" -arch ${{ matrix.goarch }} -tag "$env:TAG" -pfx_passphrase "$env:PFX_PASSPHRASE" -pfx_certificate_description "$env:PFX_CERTIFICATE_DESCRIPTION"
       - name: Test win packages installation
-        uses: newrelic/integrations-pkg-test-action/windows@v1
+        uses: newrelic/integrations-pkg-test-action/windows@v2
         with:
           tag: ${{ env.TAG }}
           integration: nri-${{ env.INTEGRATION }}
@@ -205,7 +205,7 @@ jobs:
           gpg_passphrase: ${{ secrets.OHAI_GPG_PASSPHRASE }}
           gpg_private_key_base64: ${{ secrets.OHAI_GPG_PRIVATE_KEY_BASE64 }}
       - name: Test uploaded package installability
-        uses: newrelic/integrations-pkg-test-action/linux@v1
+        uses: newrelic/integrations-pkg-test-action/linux@v2
         with:
           tag: ${{ env.TAG }}
           integration: nri-${{ env.INTEGRATION }}
